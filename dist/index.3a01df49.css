@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  background-image: url("background.fe40e636.jpg");
+  background-position: top;
+  background-size: cover;
+}
+
+.bg_container {
+  min-height: 100vh;
+  flex-direction: column;
+  display: flex;
+}
+
+header {
+  justify-content: center;
+  align-items: center;
+  padding: 50px 15px 15px;
+  display: flex;
+}
+
+header input {
+  width: 100%;
+  max-width: 280px;
+  background-color: #96cfd7;
+  border: none;
+  border-bottom: 2px solid #000;
+  border-radius: 10px;
+  outline: none;
+  padding: 10px 15px;
+}
+
+.weather_details {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 25px 50px;
+  display: flex;
+}
+
+.city {
+  color: #000;
+  margin-bottom: 5px;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.date {
+  color: #000;
+  font-size: 16px;
+}
+
+.temp {
+  color: #000;
+  text-shadow: 2px 2px #0009;
+  margin: 10px 0 5px;
+  font-size: 80px;
+}
+
+.weather {
+  color: #000;
+  margin-bottom: 15px;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.temp_range {
+  color: #000;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+/*# sourceMappingURL=index.3a01df49.css.map */
