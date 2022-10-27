@@ -6,11 +6,8 @@
 
 body {
     background-image: url('background.jpg');
-    background-size: cover;
+    background-size:cover;
     background-position: top center;
-    image-rendering: auto;
-    image-rendering: crisp-edges;
-    image-rendering: pixelated;  
 }
 
 .bg_container{
