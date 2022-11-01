@@ -536,7 +536,10 @@ require("dotenv").config();
 const APP_URL = "https://api.openweathermap.org/data/2.5/weather?";
 const api_key = "1b8b9d02ba7ad8afadd531b351409e21";
 const user_input = document.querySelector(".search");
+const msg = document.querySelector(".error_msg");
 user_input.addEventListener("keypress", getResults);
+//getting melbourne results directly on the landing page
+fetch(`${APP_URL}q=melbourne&units=metric&appid=${api_key}`).then(convertToJSObject).then(getData);
 function getResults(e) {
     if (e.keyCode == 13) {
         lonlatResults(user_input.value);
@@ -544,12 +547,15 @@ function getResults(e) {
     }
 }
 function lonlatResults(query) {
-    fetch(`${APP_URL}q=${query}&units=metric&appid=${api_key}`).then(convertToJSObject).then(getData);
+    fetch(`${APP_URL}q=${query}&units=metric&appid=${api_key}`).then(convertToJSObject).then(getData).catch(()=>{
+        msg.textContent = "Please search for a valid city";
+    });
 }
 function convertToJSObject(res) {
     return res.json();
 }
 function getData(data) {
+    msg.textContent = "";
     let city = document.querySelector(".city");
     city.textContent = `${data.name.toUpperCase()}, ${data.sys.country}`;
     let date = new Date().toDateString().toUpperCase();
