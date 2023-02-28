@@ -1,6 +1,6 @@
 require("dotenv").config();
 
-const APP_URL = "https://api.openweathermap.org/data/2.5/weather?";
+const APP_URL = "https://api.openweathermap.org/data/2.5/";
 const api_key = process.env.API_KEY;
 
 const user_input = document.querySelector(".search");
@@ -38,9 +38,12 @@ let geo_code = {
       if (request.status === 200) {
         // Success!
         console.log("i m in here");
-        var data = JSON.parse(request.responseText);
-        console.log(data.results[0].components.city); // print the location
-        lonlatResults(data.results[0].components.city);
+        let data = JSON.parse(request.responseText);
+        console.log(data.results[0]); // get complete data
+        lonlatResults(
+          data.results[0].components.city,
+          data.results[0].components.country_code
+        );
       } else if (request.status <= 500) {
         // We reached our target server, but it returned an error
 
@@ -75,8 +78,6 @@ let geo_code = {
   },
 };
 
-//getting melbourne results directly on the landing page
-
 function getResults(e) {
   if (e.keyCode == 13) {
     lonlatResults(user_input.value);
@@ -84,8 +85,8 @@ function getResults(e) {
   }
 }
 
-function lonlatResults(query) {
-  fetch(`${APP_URL}q=${query}&units=metric&appid=${api_key}`)
+function lonlatResults(query1, query2) {
+  fetch(`${APP_URL}weather?q=${query1},${query2}&units=metric&appid=${api_key}`)
     .then(convertToJSObject)
     .then(getData)
     .catch(() => {
@@ -98,6 +99,7 @@ function convertToJSObject(res) {
 }
 
 function getData(data) {
+  console.log(data);
   msg.textContent = "";
   let city = document.querySelector(".city");
   city.textContent = `${data.name.toUpperCase()}, ${data.sys.country}`;

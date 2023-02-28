@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url('background.jpg');
+    background-image: url('new_background.png');
     background-size:cover;
     background-position: top center;
 }
@@ -28,7 +28,7 @@ header {
     margin-top: 50px;
     text-transform: uppercase;
     font-weight: bold;
-    color:whitesmoke;
+    color:#e2b258;
 }
 
 header input {
@@ -51,26 +51,26 @@ header input {
 }
 
 .city {
-    color:#000;
+    color:#234099;
     font-size: 32px;
     font-weight: 500;
     margin-bottom: 5px;
 }
 
 .date {
-    color:#000;
+    color:#be5625;
     font-size: 16px;
 }
 
 .temp {
-    color:#000;
+    color:#BE4D25;
     font-size: 80px;
     margin:10px 0px 5px 0;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.6);
 }
 
 .weather {
-    color:#000;
+    color:#BE4D25;
     font-size: 32px;
     font-weight: 700;
     font-style: italic;
@@ -78,7 +78,7 @@ header input {
 }
 
 .temp_range {
-    color:#000;
+    color:#BE4D25;
     font-size: 20px;
     font-weight: 200;
 }
