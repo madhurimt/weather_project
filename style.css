@@ -6,7 +6,8 @@
 }
 
 body {
-    background-image: url('back_image.jpg');
+    /* background-image: url('back_image.jpg'); */
+    background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2) ), url('back_image.jpg');
     background-size:cover;
     background-position: top center;
 }
@@ -34,18 +35,18 @@ header {
 
 header input {
    width:100%;
-   max-width:280px;
-   padding:10px 15px;
+   max-width:450px;
+   padding:20px 25px;
    border:none;
    outline: none;
-   background-color: #61748c;
-   color:#fff;
-   border-radius:10px;
+   background-color: #fff;
+   color:#353535;
+   border-radius:20px;
    border-bottom:2px solid rgb(20, 14, 14);
 }
 
 ::placeholder{
-    color: #fff;
+    color: #353535;
     opacity: 1; 
 }
 
@@ -58,32 +59,32 @@ header input {
 }
 
 .city {
-    color:#201145;
+    color:#353535;
     font-size: 32px;
     font-weight: 500;
     margin-bottom: 5px;
 }
 
 .date {
-    color:#201145;
+    color:#353535;
     font-size: 16px;
 }
 
 .temp {
-    color:#201145;
+    color:#353535;
     font-size: 80px;
     margin:10px 0px 5px 0;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.6);
 }
 
 .weather {
-    color:#201145;
+    color:#353535;
     font-style: italic;
     margin-bottom: 15px;
 }
 
 .temp_range {
-    color:#201145;
+    color:#353535;
     font-size: 20px;
     font-weight: 200;
 }
