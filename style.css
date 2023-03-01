@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Verdana, sans-serif;
 }
 
 body {
-    background-image: url('new_background.png');
+    background-image: url('back_image.jpg');
     background-size:cover;
     background-position: top center;
 }
@@ -28,7 +29,7 @@ header {
     margin-top: 50px;
     text-transform: uppercase;
     font-weight: bold;
-    color:#e2b258;
+    color:#201145;
 }
 
 header input {
@@ -37,9 +38,15 @@ header input {
    padding:10px 15px;
    border:none;
    outline: none;
-   background-color: #96abd7;
+   background-color: #61748c;
+   color:#fff;
    border-radius:10px;
-   border-bottom:2px solid black;
+   border-bottom:2px solid rgb(20, 14, 14);
+}
+
+::placeholder{
+    color: #fff;
+    opacity: 1; 
 }
 
 .weather_details {
@@ -51,34 +58,32 @@ header input {
 }
 
 .city {
-    color:#234099;
+    color:#201145;
     font-size: 32px;
     font-weight: 500;
     margin-bottom: 5px;
 }
 
 .date {
-    color:#be5625;
+    color:#201145;
     font-size: 16px;
 }
 
 .temp {
-    color:#BE4D25;
+    color:#201145;
     font-size: 80px;
     margin:10px 0px 5px 0;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.6);
 }
 
 .weather {
-    color:#BE4D25;
-    font-size: 32px;
-    font-weight: 700;
+    color:#201145;
     font-style: italic;
     margin-bottom: 15px;
 }
 
 .temp_range {
-    color:#BE4D25;
+    color:#201145;
     font-size: 20px;
     font-weight: 200;
 }

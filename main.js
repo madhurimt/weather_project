@@ -106,11 +106,13 @@ function getData(data) {
   let date = new Date().toDateString().toUpperCase();
   document.querySelector(".date").textContent = date;
   let temp = document.querySelector(".temp");
-  temp.textContent = `${data.main.temp}°C`;
+  temp.textContent = `${data.main.temp.toFixed(1)}°C`;
   let desc = document.querySelector(".weather");
   desc.textContent = data.weather[0].description.toUpperCase();
   let range = document.querySelector(".temp_range");
-  range.textContent = `${data.main.temp_min}°C/ ${data.main.temp_max}°C`;
+  range.textContent = `${data.main.temp_min.toFixed(
+    1
+  )}°C/ ${data.main.temp_max.toFixed(1)}°C`;
 }
 
 geo_code.getLocation();
